@@ -19,6 +19,7 @@
 		1406048B19354EE1007CA14B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1406047319354EE1007CA14B /* UIKit.framework */; };
 		1406049319354EE1007CA14B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1406049119354EE1007CA14B /* InfoPlist.strings */; };
 		1406049519354EE1007CA14B /* FactoryAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406049419354EE1007CA14B /* FactoryAppTests.m */; };
+		1406049F19354F03007CA14B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1406049E19354F03007CA14B /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		1406049019354EE1007CA14B /* FactoryAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FactoryAppTests-Info.plist"; sourceTree = "<group>"; };
 		1406049219354EE1007CA14B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1406049419354EE1007CA14B /* FactoryAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryAppTests.m; sourceTree = "<group>"; };
+		1406049E19354F03007CA14B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				1406047F19354EE1007CA14B /* TFAAppDelegate.m */,
 				1406048119354EE1007CA14B /* Images.xcassets */,
 				1406047619354EE1007CA14B /* Supporting Files */,
+				1406049E19354F03007CA14B /* Main.storyboard */,
 			);
 			path = FactoryApp;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1406049F19354F03007CA14B /* Main.storyboard in Resources */,
 				1406047A19354EE1007CA14B /* InfoPlist.strings in Resources */,
 				1406048219354EE1007CA14B /* Images.xcassets in Resources */,
 			);
@@ -360,6 +364,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FactoryApp/FactoryApp-Prefix.pch";
 				INFOPLIST_FILE = "FactoryApp/FactoryApp-Info.plist";
@@ -373,6 +378,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FactoryApp/FactoryApp-Prefix.pch";
 				INFOPLIST_FILE = "FactoryApp/FactoryApp-Info.plist";
