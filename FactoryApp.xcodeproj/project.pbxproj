@@ -20,6 +20,7 @@
 		1406049319354EE1007CA14B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1406049119354EE1007CA14B /* InfoPlist.strings */; };
 		1406049519354EE1007CA14B /* FactoryAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406049419354EE1007CA14B /* FactoryAppTests.m */; };
 		1406049F19354F03007CA14B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1406049E19354F03007CA14B /* Main.storyboard */; };
+		93ED6E8D193D383400658164 /* TFAViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93ED6E8C193D383400658164 /* TFAViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		1406049219354EE1007CA14B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1406049419354EE1007CA14B /* FactoryAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryAppTests.m; sourceTree = "<group>"; };
 		1406049E19354F03007CA14B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		93ED6E8B193D383400658164 /* TFAViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFAViewController.h; sourceTree = "<group>"; };
+		93ED6E8C193D383400658164 /* TFAViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFAViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +112,8 @@
 		1406047519354EE1007CA14B /* FactoryApp */ = {
 			isa = PBXGroup;
 			children = (
-				1406047E19354EE1007CA14B /* TFAAppDelegate.h */,
-				1406047F19354EE1007CA14B /* TFAAppDelegate.m */,
+				93ED6E8B193D383400658164 /* TFAViewController.h */,
+				93ED6E8C193D383400658164 /* TFAViewController.m */,
 				1406048119354EE1007CA14B /* Images.xcassets */,
 				1406047619354EE1007CA14B /* Supporting Files */,
 				1406049E19354F03007CA14B /* Main.storyboard */,
@@ -124,6 +127,8 @@
 				1406047719354EE1007CA14B /* FactoryApp-Info.plist */,
 				1406047819354EE1007CA14B /* InfoPlist.strings */,
 				1406047B19354EE1007CA14B /* main.m */,
+				1406047F19354EE1007CA14B /* TFAAppDelegate.m */,
+				1406047E19354EE1007CA14B /* TFAAppDelegate.h */,
 				1406047D19354EE1007CA14B /* FactoryApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
@@ -245,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1406048019354EE1007CA14B /* TFAAppDelegate.m in Sources */,
+				93ED6E8D193D383400658164 /* TFAViewController.m in Sources */,
 				1406047C19354EE1007CA14B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -446,6 +452,7 @@
 				1406049A19354EE1007CA14B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1406049B19354EE1007CA14B /* Build configuration list for PBXNativeTarget "FactoryAppTests" */ = {
 			isa = XCConfigurationList;
@@ -454,6 +461,7 @@
 				1406049D19354EE1007CA14B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
