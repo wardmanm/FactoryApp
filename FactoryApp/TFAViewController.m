@@ -27,12 +27,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    allItems = [[NSArray alloc] initWithObjects:@"One, @Two, @Three, @Four, @Five, @Six, @Seven, @Eight, @Nine, @Ten", nil];
+    allItems = [[NSArray alloc] initWithObjects:@"One", @"Two", @"Three", @"Four", @"Five", @"Six", @"Seven", @"Eight", @"Nine", @"Ten", nil];
     displayItems = [[NSMutableArray alloc] initWithArray:allItems];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardHidden:) name:UIKeyboardWillHideNotification object:nil];
 }
 
+//when the keyboard is shown, resizes the table view so it does not cut anything off.
 -(void) keyboardShown:(NSNotification *)note {
     CGRect keyboardFrame;
     [[[note userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] getValue:&keyboardFrame];
@@ -41,20 +42,24 @@
     [tableView setFrame:tableViewFrame];
 }
 
+//When keyboard is hidden this changes the size back to normal of the table view
 -(void) keyboardHidden:(NSNotification *)note {
     [tableView setFrame:self.view.bounds];
 }
 
+
+//returns the number of sections in the table view
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
 
+//returns the number of rows in the tableview
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [displayItems count];
 }
 
-
+//returns the text of item stored in row
 - (UITableViewCell *) tableView:(UITableView *)aTableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell * cell = [aTableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (!cell) {
@@ -64,6 +69,7 @@
     return cell;
 }
 
+//when something is typed in the search bar it returns the results using fuzzy searching
 -(void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     if ([searchText length] == 0) {
         [displayItems removeAllObjects];
@@ -80,6 +86,7 @@
     [tableView reloadData];
 }
 
+//when search is clicked this hides the keyboard
 -(void) searchBarSearchButtonClicked:(UISearchBar *)aSearchBar {
     [searchBar resignFirstResponder];
 }
