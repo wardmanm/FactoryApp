@@ -8,7 +8,10 @@
 
 #import "TFAViewController.h"
 
-@interface TFAViewController ()
+@interface TFAViewController (){
+    NSArray *people;
+    NSMutableArray *peopleSearch;
+}
 
 @end
 
@@ -23,12 +26,40 @@
     return self;
 }
 
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        NSDictionary *trenton = @{@"ama": @"",
+                                  @"bio": @"",
+                                  @"email": @"",
+                                  @"fb": @"",
+                                  @"name": @"Trenton Broughton",
+                                  @"twitter": @"",
+                                  @"pic": @""};
+        NSDictionary *garrick = @{@"ama": @"",
+                                  @"bio": @"",
+                                  @"email": @"",
+                                  @"fb": @"",
+                                  @"name": @"Garrick Pohl",
+                                  @"twitter": @"",
+                                  @"pic": @""};
+        NSDictionary *ron = @{@"ama": @"",
+                              @"bio": @"",
+                              @"email": @"",
+                              @"fb": @"",
+                              @"name": @"Ron VanSurksum",
+                              @"twitter": @"",
+                              @"pic": @""};
+        people = @[trenton, garrick, ron];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    allItems = [[NSArray alloc] initWithObjects:@"One", @"Two", @"Three", @"Four", @"Five", @"Six", @"Seven", @"Eight", @"Nine", @"Ten", nil];
-    displayItems = [[NSMutableArray alloc] initWithArray:allItems];
+    peopleSearch = [[NSMutableArray alloc] initWithArray:people];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShown:) name:UIKeyboardDidShowNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardHidden:) name:UIKeyboardWillHideNotification object:nil];
 }
@@ -56,7 +87,7 @@
 
 //returns the number of rows in the tableview
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [displayItems count];
+    return [people count];
 }
 
 //returns the text of item stored in row
@@ -65,21 +96,21 @@
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    cell.textLabel.text = [displayItems objectAtIndex: indexPath.row];
+    cell.textLabel.text = [people objectAtIndex: indexPath.row][@"name"];
     return cell;
 }
 
 //when something is typed in the search bar it returns the results using fuzzy searching
--(void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+-(void) searchBar:(UISearchBar *)aSearchBar textDidChange:(NSString *)searchText {
     if ([searchText length] == 0) {
-        [displayItems removeAllObjects];
-        [displayItems addObjectsFromArray:allItems];
+        [peopleSearch removeAllObjects];
+        [peopleSearch addObjectsFromArray:people];
     } else {
-        [displayItems removeAllObjects];
-        for(NSString * string in allItems) {
+        [peopleSearch removeAllObjects];
+        for(NSString * string in people) {
             NSRange r = [string rangeOfString:searchText options:NSCaseInsensitiveSearch];
             if(r.location != NSNotFound){
-                [displayItems addObject:string];
+                [peopleSearch addObject:string];
             }
         }
     }

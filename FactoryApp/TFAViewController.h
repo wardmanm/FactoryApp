@@ -12,8 +12,7 @@
     IBOutlet UITableView * tableView;
     IBOutlet UISearchBar * searchBar;
     
-    NSArray * allItems;
-    NSMutableArray * displayItems;
+
 }
 
 @end
