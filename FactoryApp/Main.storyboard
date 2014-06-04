@@ -38,7 +38,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="75e-Iy-nRP"/>
                     <connections>
-                        <segue destination="L4c-xl-sxc" kind="push" id="IIk-ZK-A8T"/>
+                        <segue destination="L4c-xl-sxc" kind="push" identifier="showMemberDetailsSegue" id="IIk-ZK-A8T"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pe9-DE-nX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
