@@ -10,4 +10,7 @@
 
 @interface TFADetailViewController : UIViewController
 
+@property (nonatomic) NSDictionary *person;
+@property IBOutlet UILabel *nameLabel;
+
 @end
