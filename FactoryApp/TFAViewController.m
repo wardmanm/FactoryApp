@@ -103,7 +103,7 @@
 
 //when something is typed in the search bar it returns the results using fuzzy searching
 -(void) searchBar:(UISearchBar *)aSearchBar textDidChange:(NSString *)searchText {
-    if ([searchText length] == 0) {
+    if (searchText.length == 0) {
         [peopleSearch removeAllObjects];
         [peopleSearch addObjectsFromArray:people];
     } else {

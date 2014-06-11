@@ -20,6 +20,9 @@
                                 <string>Title</string>
                                 <string>Title</string>
                             </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="Vm7-o2-dmE" id="Gjm-xl-flW"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="zWE-ch-eWO" style="IBUITableViewCellStyleDefault" id="WIW-ll-VOo">
@@ -50,6 +53,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="75e-Iy-nRP"/>
+                    <connections>
+                        <outlet property="searchBar" destination="abx-RH-hDg" id="0DX-xr-mq6"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pe9-DE-nX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,6 +123,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bcV-ce-mMY"/>
+        <segue reference="xFR-xm-p61"/>
     </inferredMetricsTieBreakers>
 </document>
