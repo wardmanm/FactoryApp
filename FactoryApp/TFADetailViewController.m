@@ -7,6 +7,7 @@
 //
 
 #import "TFADetailViewController.h"
+#import "TFAMember.h"
 
 @interface TFADetailViewController ()
 
@@ -27,7 +28,12 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.nameLabel.text = self.person[@"name"];
+    self.nameLabel.text = self.person.name;
+    self.picture.image = self.person.pic;
+    self.bioLabel.text = self.person.bio;
+    self.emailLabel.text = self.person.email;
+    self.twitterLabel.text = self.person.twitter;
+    self.fbLabel.text = self.person.fb;
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,7 +52,10 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+-(void)setPerson:(TFAMember *)person {
+    _person = person;
+    
+}
 
 
 @end

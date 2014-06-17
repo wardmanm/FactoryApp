@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TFAViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate> {
-    IBOutlet UITableView * tableView;
-    IBOutlet UISearchBar * searchBar;
-    
+@interface TFAViewController : UITableViewController
+//<UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate> {
+//    IBOutlet UITableView * tableView;
+//    IBOutlet UISearchBar * searchBar;
 
-}
+
+
 
 @end
