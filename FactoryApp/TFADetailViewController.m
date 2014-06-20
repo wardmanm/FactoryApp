@@ -2,7 +2,7 @@
 //  TFADetailViewController.m
 //  FactoryApp
 //
-//  Created by Tim Holt on 6/3/14.
+//  Created by iOyster on 6/3/14.
 //  Copyright (c) 2014 Team FactoryApp. All rights reserved.
 //
 
@@ -75,6 +75,7 @@
 
 - (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
+    // Logs user selections and errors on the mail app
     switch (result)
     {
         case MFMailComposeResultCancelled:
