@@ -31,9 +31,7 @@
     self.nameLabel.text = self.person.name;
     self.picture.image = self.person.pic;
     self.bioLabel.text = self.person.bio;
-    self.emailLabel.text = self.person.email;
-    self.twitterLabel.text = self.person.twitter;
-    self.fbLabel.text = self.person.fb;
+    self.amaTextView.text = self.person.ama;
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,6 +54,17 @@
     _person = person;
     
 }
+- (IBAction)mailButton:(UIButton *)sender {
+    
+}
 
+- (IBAction)twitButton:(UIButton *)sender {
+    NSString *twitUrl = [NSString stringWithFormat: @"https://twitter.com/%@" , self.person.twitter];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: twitUrl]];
+}
 
+- (IBAction)fbButton:(UIButton *)sender {
+    NSString *fbUrl = [NSString stringWithFormat: @"http://m.facebook.com/profile.php?id=%@" , self.person.fb];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: fbUrl]];
+}
 @end

@@ -20,6 +20,7 @@
 		1406049319354EE1007CA14B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1406049119354EE1007CA14B /* InfoPlist.strings */; };
 		1406049519354EE1007CA14B /* FactoryAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1406049419354EE1007CA14B /* FactoryAppTests.m */; };
 		1406049F19354F03007CA14B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1406049E19354F03007CA14B /* Main.storyboard */; };
+		146A44BF195227F300EB5B29 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 146A44BE195227F300EB5B29 /* MessageUI.framework */; };
 		14D14CEB19509A9A008953FB /* TFAMemberDatastore.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D14CEA19509A9A008953FB /* TFAMemberDatastore.m */; };
 		14D14CEE19509B5A008953FB /* TFAMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 14D14CED19509B5A008953FB /* TFAMember.m */; };
 		9382E3E1193E8CE400252278 /* TFADetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9382E3E0193E8CE400252278 /* TFADetailViewController.m */; };
@@ -54,6 +55,7 @@
 		1406049219354EE1007CA14B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1406049419354EE1007CA14B /* FactoryAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FactoryAppTests.m; sourceTree = "<group>"; };
 		1406049E19354F03007CA14B /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		146A44BE195227F300EB5B29 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		14D14CE919509A9A008953FB /* TFAMemberDatastore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFAMemberDatastore.h; sourceTree = "<group>"; };
 		14D14CEA19509A9A008953FB /* TFAMemberDatastore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFAMemberDatastore.m; sourceTree = "<group>"; };
 		14D14CEC19509B5A008953FB /* TFAMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFAMember.h; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				146A44BF195227F300EB5B29 /* MessageUI.framework in Frameworks */,
 				1406047219354EE1007CA14B /* CoreGraphics.framework in Frameworks */,
 				1406047419354EE1007CA14B /* UIKit.framework in Frameworks */,
 				1406047019354EE1007CA14B /* Foundation.framework in Frameworks */,
@@ -110,6 +113,7 @@
 		1406046E19354EE1007CA14B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				146A44BE195227F300EB5B29 /* MessageUI.framework */,
 				1406046F19354EE1007CA14B /* Foundation.framework */,
 				1406047119354EE1007CA14B /* CoreGraphics.framework */,
 				1406047319354EE1007CA14B /* UIKit.framework */,
