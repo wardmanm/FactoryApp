@@ -55,15 +55,57 @@
     
 }
 - (IBAction)mailButton:(UIButton *)sender {
+    // Email Subject
+    NSString *emailTitle = @"Hello from the Factory!";
+    // Email Content
+    NSString *messageBody = [NSString stringWithFormat: @"Hello %@!  I was viewing your profile on the iOS actory App and had a few questions...", self.person.name] ;
+    // Dynamic address based on Parse info
+    NSArray *toRecipents = [NSArray arrayWithObject:self.person.email];
+    
+    MFMailComposeViewController *mc = [[MFMailComposeViewController alloc] init];
+    mc.mailComposeDelegate = self;
+    [mc setSubject:emailTitle];
+    [mc setMessageBody:messageBody isHTML:NO];
+    [mc setToRecipients:toRecipents];
+    
+    // Present mail view controller on screen
+    [self presentViewController:mc animated:YES completion:NULL];
+    
+}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
+{
+    switch (result)
+    {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:NULL];
     
 }
 
 - (IBAction)twitButton:(UIButton *)sender {
+    // Dynamic twitter URL based on Parse info
     NSString *twitUrl = [NSString stringWithFormat: @"https://twitter.com/%@" , self.person.twitter];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: twitUrl]];
 }
 
 - (IBAction)fbButton:(UIButton *)sender {
+    // Dynamic Facebook profile URL based on Parse info
     NSString *fbUrl = [NSString stringWithFormat: @"http://m.facebook.com/profile.php?id=%@" , self.person.fb];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: fbUrl]];
 }
